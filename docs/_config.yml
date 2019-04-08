@@ -1,1 +1,9 @@
+title: 
+description: 
+
 theme: jekyll-theme-tactile
+
+show_downloads: true
+
+github:
+public: true

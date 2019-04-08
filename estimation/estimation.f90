@@ -9,7 +9,7 @@ MODULE ESTIMATION_MOD
 !    TIMATIVA INICAL PARA UM MÉTODO
 !    DO TIPO GAUSS-NEWTON (ANDERSON ET AL.,AICHE J.,1978,24(1),20-29) COM ACELER
 !    ADOR DE LAW E BAILEY (LAW & BAILEY,CHEM.ENG.SCI.,1963,18,189-202)
-!    ANÁLISE ESTATÍSTICA DE TESTES T-STUDENT, XI^2 E FISHER COMO DESC
+!    ANÁLISE ESTATÍSTICA DE TESTES T-STUDENT, CHI^2 E FISHER COMO DESC
 !    RITO POR  SCHWAAB, M. PINTO, J. C. ANÁLISE DE DADOS EXPERIMENTAIS I FUNDAM
 !    ENTOS DE ESTATÍSTICA E ESTIMAÇÃO DE PARÂMETROS.EPAPERS, RIO DE JANEIRO,2007
 !    UTILIZAÇÃO DE FUNÇÕES ESTATÍSTICAS DA BIBLIOTECA GSL
@@ -118,7 +118,7 @@ CONTAINS
     PRINT*,"                                                                        "
     PRINT*,"                                                  FOR NON-LINEAR MODELS "
     PRINT*,"                                                                        "
-    PRINT*," EXP > WLS-OBJF > SWARM > GAUSSNEWTON > COR > T-STUDENT > XI^2 > FISHER "
+    PRINT*," EXP > WLSOBJF > SWARM > GAUSSNEWTON > COR > T-STUDENT > CHI^2 > FISHER "
     PRINT*,"                                                                        "
     PRINT*,"========================================================================"
     PRINT*,"                                                                        "
