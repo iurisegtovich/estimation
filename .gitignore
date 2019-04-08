@@ -1,0 +1,17 @@
+BUILDS/*/bin/**
+!BUILDS/*/bin/README.md
+
+BUILDS/*/obj/**
+!BUILDS/*/obj/README.md
+
+OUTPUT/**
+!OUTPUT/README.md
+!OUTPUT/*.ods
+
+**/__refs/**
+
+**/.ipynb_checkpoints
+**/*.pyc
+
+__changelog.md
+__changelog.md.html
