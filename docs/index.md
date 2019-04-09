@@ -12,7 +12,7 @@ e avaliar intervalos de confiança para os parâmetros determinados e para as pr
 Aqui, apresentamos um código básico e material complementar no âmbito do curso de estimação de parâmetros em problemas de engenharia química.
 
 O código, em fortran moderno, compreende o cômputo de função objetivo, otimização de parâmetros e análise estatística dos resultados, para um modelo algébrico diferencial arbitrário.
-Esse código e material serão distribuídos eletronicamente, através da plataforma gitlab, no projeto ESTIMATION, vinculado ao perfil de um dos autores (iurisegtovich) [2].
+Esse código e material serão distribuídos eletronicamente, através da plataforma github, no projeto ESTIMATION, vinculado ao perfil de um dos autores (iurisegtovich) [2].
 O repositório servirá de base centralizadora de relatos de problemas (issues) e distribuidora de versões atualizadas (releases).
 
 O material se propõe a ser o mais simples possível, dentro do escopo do curso de estimação de parâmetros em problemas de engenharia química.
@@ -36,8 +36,8 @@ Para relatar problemas ou acompanhar a discussão de problemas, visite a seção
 
 * [1] Schwaab & Pinto, 2007, Análise de Dados Experimentais I - Fundamentos de Estatística e Estimação de Parâmetros.
 [http://www.e-papers.com.br/produtos.asp?codigo_produto=2792]
-* [2] https://gitlab.com/iurisegtovich/estimation/wikis/home
-* [3] https://gitlab.com/iurisegtovich/estimation.git
+* [2] https://github.com/iurisegtovich/estimation/wiki
+* [3] https://github.com/iurisegtovich/estimation.git
 * [4] https://drive.google.com/drive/folders/1XkYoQxE0n9-_LGhKgn1Qp3XsMpgUg7_y
 * [5] https://drive.google.com/drive/folders/1ig_FLHNz24TN2ibzPxI9_cAjnWmpmO_E
 * [6] https://drive.google.com/drive/folders/1Qyd68U0INcv54r0vWPdNPxjdYVopDDtE
