@@ -12,7 +12,7 @@ e avaliar intervalos de confiança para os parâmetros determinados e para as pr
 Aqui, apresentamos um código básico e material complementar no âmbito do curso de estimação de parâmetros em problemas de engenharia química.
 
 O código, em fortran moderno, compreende o cômputo de função objetivo, otimização de parâmetros e análise estatística dos resultados, para um modelo algébrico diferencial arbitrário.
-Esse código e material serão distribuídos eletronicamente, através da plataforma github, no projeto ESTIMATION, vinculado ao perfil de um dos autores (iurisegtovich) [2].
+Esse código e material serão distribuídos eletronicamente, através da plataforma github, no projeto ESTIMATION, vinculado ao perfil de um dos autores (iurisegtovich) [9].
 O repositório servirá de base centralizadora de relatos de problemas (issues) e distribuidora de versões atualizadas (releases).
 
 O material se propõe a ser o mais simples possível, dentro do escopo do curso de estimação de parâmetros em problemas de engenharia química.
@@ -27,6 +27,10 @@ Material de apoio teórico sobre a metodologia implementada no ESTIMATION está 
 Instruções para instalar as ferramentas para compilação de código em fortran e construção de executáveis estão descritas para windows em [4] e para linux em [5].
 
 Instruções para carregar o código ESTIMATION a partir do repositório git, usando as ferramentas recomendadas, e executar exemplos e acoplar o código de estimação a modelos algébrico diferenciais arbitrários estão descritas em [6].
+
+## Mais informações
+
+Mais informações serão disponibilizadas em formato wiki vinculado ao repositório do projeto [2].
 
 ## Problemas ?
 
@@ -43,4 +47,4 @@ Para relatar problemas ou acompanhar a discussão de problemas, visite a seção
 * [6] https://drive.google.com/drive/folders/1Qyd68U0INcv54r0vWPdNPxjdYVopDDtE
 * [7] https://drive.google.com/drive/folders/19ecI2YKMGeaCGc4s_e1WOkTFfQ_AZ1x8
 * [8] https://github.com/iurisegtovich/estimation/issues
-
+* [9] https://iurisegtovich.github.io/estimation/
