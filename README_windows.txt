@@ -1,5 +1,7 @@
-Codebase do projeto estimation.
+parameter ESTIMATION for non linear models
 
-Resumo: https://iurisegtovich.github.io/estimation/
+Codebase (github): https://github.com/iurisegtovich/estimation/tree/master
 
-Mais informações: https://github.com/iurisegtovich/estimation/wiki
+Resumo (github-pages): https://iurisegtovich.github.io/estimation/
+
+Mais informações (wiki): https://github.com/iurisegtovich/estimation/wiki
