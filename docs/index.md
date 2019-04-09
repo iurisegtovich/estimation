@@ -2,6 +2,8 @@
 
 # Resumo
 
+## Estimação de parâmetros
+
 O problema de estimação de parâmetros de modelos não lineares é um problema recorrente na engenharia química.
 
 A metodologia de estimação de parâmetros baseada no critério da máxima verossimilhança, descrita em Schwaab e Pinto [1],
@@ -20,13 +22,19 @@ Desse modo, permite o aluno investigar a estrutura do código, se poupando de im
 
 O código está organizado em uma série de pastas, e pode ser obtido, em sua estrutura original no repositório git através do endereço [3].
 
+Material de apoio teórico sobre a metodologia implementada no ESTIMATION está disponível em [7].
+
+## Instalação
+
 Instruções para instalar as ferramentas para compilação de código em fortran e construção de executáveis estão descritas para windows em [4] e para linux em [5].
 
 Instruções para carregar o código ESTIMATION a partir do repositório git, usando as ferramentas recomendadas, e executar exemplos e acoplar o código de estimação a modelos algébrico diferenciais arbitrários estão descritas em [6].
 
-Material de apoio teórico sobre a metodologia implementada no ESTIMATION está disponível em [7].
+## Problemas ?
 
-#Referências
+Para relatar problemas ou acompanhar a discussão de problemas, visite a seção "issues" do projeto [8]
+
+## Referências
 
 * [1] Schwaab & Pinto, 2007, Análise de Dados Experimentais I - Fundamentos de Estatística e Estimação de Parâmetros.
 [http://www.e-papers.com.br/produtos.asp?codigo_produto=2792]
@@ -36,3 +44,4 @@ Material de apoio teórico sobre a metodologia implementada no ESTIMATION está 
 * [5] https://drive.google.com/drive/folders/1ig_FLHNz24TN2ibzPxI9_cAjnWmpmO_E
 * [6] https://drive.google.com/drive/folders/1Qyd68U0INcv54r0vWPdNPxjdYVopDDtE
 * [7] https://drive.google.com/drive/folders/19ecI2YKMGeaCGc4s_e1WOkTFfQ_AZ1x8
+* [8] https://github.com/iurisegtovich/estimation/issues
