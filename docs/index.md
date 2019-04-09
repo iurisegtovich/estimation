@@ -1,3 +1,5 @@
+![splash.png](splash.png)
+
 # Resumo
 
 O problema de estimação de parâmetros de modelos não lineares é um problema recorrente na engenharia química.

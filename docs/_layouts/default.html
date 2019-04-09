@@ -16,7 +16,8 @@
   <body>
 
       <header>
-          <img src="splash.png">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
       </header>
 
       <div id="banner">
