@@ -1,3 +1,5 @@
+# Resumo
+
 O problema de estimação de parâmetros de modelos não lineares é um problema recorrente na engenharia química.
 
 A metodologia de estimação de parâmetros baseada no critério da máxima verossimilhança, descrita em Schwaab e Pinto [1],
@@ -21,6 +23,8 @@ Instruções para instalar as ferramentas para compilação de código em fortra
 Instruções para carregar o código ESTIMATION a partir do repositório git, usando as ferramentas recomendadas, e executar exemplos e acoplar o código de estimação a modelos algébrico diferenciais arbitrários estão descritas em [6].
 
 Material de apoio teórico sobre a metodologia implementada no ESTIMATION está disponível em [7].
+
+#Referências
 
 * [1] Schwaab & Pinto, 2007, Análise de Dados Experimentais I - Fundamentos de Estatística e Estimação de Parâmetros.
 [http://www.e-papers.com.br/produtos.asp?codigo_produto=2792]
