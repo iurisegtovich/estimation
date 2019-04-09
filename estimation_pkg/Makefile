@@ -9,18 +9,18 @@ build: .FORCE
 
 run: .FORCE
 	make BUILDS/$(mode)/bin/main.elf mode=$(mode)
-	(export PATH=$$PATH:gsl; echo $$PATH; \
+	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
 	BUILDS/$(mode)/bin/main.elf)
 
 debug: .FORCE
-	make debug/bin/main.elf mode=debug
-	(export PATH=$$PATH:gsl; echo $$PATH; \
-	gdb debug/bin/main.elf)
+	make BUILDS/debug/bin/main.elf mode=debug
+	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
+	gdb BUILDS/debug/bin/main.elf)
 
 memcheck: .FORCE
-	make debug/bin/main.elf mode=debug
-	(export PATH=$$PATH:gsl; echo $$PATH; \
-	valgrind --gen-suppressions=yes --leak-check=full --track-origins=yes --show-leak-kinds=all debug/bin/main.elf)
+	make BUILDS/debug/bin/main.elf mode=debug
+	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
+	valgrind --gen-suppressions=yes --leak-check=full --track-origins=yes --show-leak-kinds=all BUILDS/debug/bin/main.elf)
 
 version: .FORCE
 	git log -1 --pretty=format:"commit %H%n" > BUILDS/$(mode)/bin/version.txt #hash
@@ -33,7 +33,7 @@ clean: .FORCE
 	rm -f BUILDS/$(mode)/obj/*.mod
 	rm -f BUILDS/$(mode)/bin/version.txt
 
-# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<bj<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 # O programa make:
@@ -79,25 +79,22 @@ clean: .FORCE
 ## Receita para o programa final:
 BUILDS/$(mode)/bin/main.elf: .FORCE
 	#dassl
-	$(COMPILER) $(FOR_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl/dlinpk.f -o BUILDS/$(mode)/obj/dlinpk.o
-	$(COMPILER) $(FOR_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl/ddassl.f -o BUILDS/$(mode)/obj/ddassl.o
+	$(COMPILER) $(FOR_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl_src/dlinpk.f -o BUILDS/$(mode)/obj/dlinpk.o
+	$(COMPILER) $(FOR_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl_src/ddassl.f -o BUILDS/$(mode)/obj/ddassl.o
 	#random
-	$(COMPILER) $(FCOPTS) -Wno-conversion -JBUILDS/$(mode)/obj -c ziggurat/ziggurat.f90 -o BUILDS/$(mode)/obj/ziggurat.o
-	#modelo
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c MODEL/models.f90 -o BUILDS/$(mode)/obj/models.o
+	$(COMPILER) $(FCOPTS) -Wno-conversion -JBUILDS/$(mode)/obj -c ziggurat_src/ziggurat.f90 -o BUILDS/$(mode)/obj/ziggurat.o
 	#estimation
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation/global.f90 -o BUILDS/$(mode)/obj/global.o
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation/objF.f90 -o BUILDS/$(mode)/obj/objF.o
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation/Swarm.f90 -o BUILDS/$(mode)/obj/Swarm.o
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation/GaussNewton.f90 -o BUILDS/$(mode)/obj/GaussNewton.o
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation/estimation.f90 -o BUILDS/$(mode)/obj/estimation.o
-	#principal
-	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c MAIN/main.f90 -o BUILDS/$(mode)/obj/main.o
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation_src/global.f90 -o BUILDS/$(mode)/obj/global.o
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation_src/WLSobjF.f90 -o BUILDS/$(mode)/obj/WLSobjF.o
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation_src/Swarm.f90 -o BUILDS/$(mode)/obj/Swarm.o
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation_src/GaussNewton.f90 -o BUILDS/$(mode)/obj/GaussNewton.o
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c estimation_src/estimation.f90 -o BUILDS/$(mode)/obj/estimation.o
+	#principal, modelo
+	$(COMPILER) $(FCOPTS) -JBUILDS/$(mode)/obj -c MODEL_src/main.f90 -o BUILDS/$(mode)/obj/main.o
 	#version
 	make version
 	#link
-	$(LINKER) $(LINK_OPTS) BUILDS/$(mode)/obj/*.o -o $@ -Lgsl -lgsl -lgslcblas
-
+	$(LINKER) $(LINK_OPTS) BUILDS/$(mode)/obj/*.o -o $@ -Lgsl_lib -lgsl -lgslcblas
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

@@ -1,12 +1,12 @@
-BUILDS/*/bin/**
-!BUILDS/*/bin/README.md
+estimation_pkg/BUILDS/*/bin/**
+!estimation_pkg/BUILDS/*/bin/README.md
 
-BUILDS/*/obj/**
-!BUILDS/*/obj/README.md
+estimation_pkg/BUILDS/*/obj/**
+!estimation_pkg/BUILDS/*/obj/README.md
 
-OUTPUT/**
-!OUTPUT/README.md
-!OUTPUT/*.ods
+estimation_pkg/OUTPUT/**
+!estimation_pkg/OUTPUT/README.md
+!estimation_pkg/OUTPUT/*.ods
 
 **/__refs/**
 
