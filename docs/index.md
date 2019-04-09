@@ -2,8 +2,6 @@
 
 # Resumo
 
-## Estimação de parâmetros
-
 O problema de estimação de parâmetros de modelos não lineares é um problema recorrente na engenharia química.
 
 A metodologia de estimação de parâmetros baseada no critério da máxima verossimilhança, descrita em Schwaab e Pinto [1],
@@ -45,3 +43,4 @@ Para relatar problemas ou acompanhar a discussão de problemas, visite a seção
 * [6] https://drive.google.com/drive/folders/1Qyd68U0INcv54r0vWPdNPxjdYVopDDtE
 * [7] https://drive.google.com/drive/folders/19ecI2YKMGeaCGc4s_e1WOkTFfQ_AZ1x8
 * [8] https://github.com/iurisegtovich/estimation/issues
+
