@@ -1,13 +1,17 @@
-MODULE MODELS_MOD
-!===============================================================================
+program main
+!-------------------------------------------------------------------------------
+  use estimation_mod
+!-------------------------------------------------------------------------------
+  call estimation(MODELS)
+!-------------------------------------------------------------------------------
   CONTAINS
 !===============================================================================
   SUBROUTINE MODELS(M,VARENT, VARSAI, PARAM, GUESS)
-    INTEGER :: M
+    INTEGER , INTENT(IN) :: M
     REAL(8), INTENT(IN) :: VARENT(:)
     REAL(8), INTENT(OUT) :: VARSAI(:)
     REAL(8), INTENT(IN) :: GUESS(:)
-    REAL(8) :: PARAM(:)
+    REAL(8), INTENT(IN) :: PARAM(:)
     SELECT CASE(M)
     CASE(1)
       CALL MODEL_A(VARENT, VARSAI, PARAM, GUESS)
