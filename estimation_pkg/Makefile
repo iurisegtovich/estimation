@@ -15,7 +15,7 @@ run: .FORCE
 debug: .FORCE
 	make BUILDS/debug/bin/main.elf mode=debug
 	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
-	gdb BUILDS/debug/bin/main.elf)
+	cgdb BUILDS/debug/bin/main.elf)
 
 memcheck: .FORCE
 	make BUILDS/debug/bin/main.elf mode=debug
@@ -145,7 +145,7 @@ else ifeq ($(mode),release)
   FCOPTS = $(BASIC_OPTS)
   LINK_OPTS = -static
 else
-  $(error mode value - "mode=debug" or "mode=fast" or "mode=trap")
+  $(error mode value - "mode=debug" or "mode=fast" or "mode=trap" or "mode=release")
 endif
 
 FOR_BASIC_OPTIONS = -O0 -std=legacy
