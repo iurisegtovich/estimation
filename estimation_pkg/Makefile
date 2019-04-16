@@ -23,9 +23,9 @@ memcheck: .FORCE
 	valgrind --gen-suppressions=yes --leak-check=full --track-origins=yes --show-leak-kinds=all BUILDS/debug/bin/main.elf)
 
 version: .FORCE
-	git log -1 --pretty=format:"commit %H%n" > BUILDS/$(mode)/bin/version.txt #hash
-	git log -1 --pretty=format:"Date: %ad%n" >> BUILDS/$(mode)/bin/version.txt #date
-	git status -sb >> BUILDS/$(mode)/bin/version.txt #status
+	#git log -1 --pretty=format:"commit %H%n" > BUILDS/$(mode)/bin/version.txt #hash
+	#git log -1 --pretty=format:"Date: %ad%n" >> BUILDS/$(mode)/bin/version.txt #date
+	#git status -sb >> BUILDS/$(mode)/bin/version.txt #status
 
 clean: .FORCE
 	rm -f BUILDS/$(mode)/bin/*.elf
@@ -166,3 +166,5 @@ FOR_BASIC_OPTIONS = -O0 -std=legacy
 .PHONY: .FORCE
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#TODO: variables: INPUTDIR, OUTPUTDIR, MODELSRCDIR/FILE(S), HASGITFLAG
