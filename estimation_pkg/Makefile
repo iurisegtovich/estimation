@@ -94,7 +94,7 @@ BUILDS/$(mode)/bin/main.elf: .FORCE
 	#version
 	make version
 	#link
-	$(LINKER) $(LINK_OPTS) BUILDS/$(mode)/obj/*.o -o $@ -Lgsl_lib -lgsl -lgslcblas
+	$(LINKER) $(LINK_OPTS) BUILDS/$(mode)/obj/*.o -o $@ -Lgsl_lib_32 -lgsl -lgslcblas
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
