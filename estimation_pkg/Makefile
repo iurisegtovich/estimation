@@ -9,17 +9,17 @@ build: .FORCE
 
 run: .FORCE
 	make BUILDS/$(mode)/bin/main.elf mode=$(mode)
-	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
+	(export PATH=$$PATH:gsl_lib_32; echo $$PATH; \
 	BUILDS/$(mode)/bin/main.elf)
 
 debug: .FORCE
 	make BUILDS/debug/bin/main.elf mode=debug
-	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
+	(export PATH=$$PATH:gsl_lib_32; echo $$PATH; \
 	cgdb BUILDS/debug/bin/main.elf)
 
 memcheck: .FORCE
 	make BUILDS/debug/bin/main.elf mode=debug
-	(export PATH=$$PATH:gsl_lib; echo $$PATH; \
+	(export PATH=$$PATH:gsl_lib_32; echo $$PATH; \
 	valgrind --gen-suppressions=yes --leak-check=full --track-origins=yes --show-leak-kinds=all BUILDS/debug/bin/main.elf)
 
 version: .FORCE
