@@ -1,4 +1,5 @@
 ![splash](images/splash.png)
+[![DOI](https://zenodo.org/badge/179903677.svg)](https://zenodo.org/badge/latestdoi/179903677)
 
 # Resumo
 
@@ -12,7 +13,7 @@ e avaliar intervalos de confiança para os parâmetros determinados e para as pr
 Aqui, apresentamos um código básico e material complementar no âmbito do curso de estimação de parâmetros em problemas de engenharia química.
 
 O código, em fortran moderno, compreende o cômputo de função objetivo, otimização de parâmetros e análise estatística dos resultados, para um modelo algébrico diferencial arbitrário.
-Esse código e material serão distribuídos eletronicamente, através da plataforma github, no projeto ESTIMATION, vinculado ao perfil de um dos autores (iurisegtovich) [9].
+Esse código e material serão distribuídos eletronicamente, através da plataforma github, no projeto ESTIMATION, vinculado ao meu perfil (iurisegtovich) [9].
 O repositório servirá de base centralizadora de relatos de problemas (issues) e distribuidora de versões atualizadas (releases).
 
 O material se propõe a ser o mais simples possível, dentro do escopo do curso de estimação de parâmetros em problemas de engenharia química.
@@ -42,9 +43,35 @@ Para relatar problemas ou acompanhar a discussão de problemas, visite a seção
 [http://www.e-papers.com.br/produtos.asp?codigo_produto=2792]
 * [2] https://github.com/iurisegtovich/estimation/wiki
 * [3] https://github.com/iurisegtovich/estimation.git
-* [4] https://drive.google.com/drive/folders/1XkYoQxE0n9-_LGhKgn1Qp3XsMpgUg7_y
+* [4] https://drive.google.com/open?id=1DVgU6gAzuvOezrl_V1oZj_gfTe5oGeb-
 * [5] https://drive.google.com/drive/folders/1ig_FLHNz24TN2ibzPxI9_cAjnWmpmO_E
 * [6] https://drive.google.com/drive/folders/1Qyd68U0INcv54r0vWPdNPxjdYVopDDtE
 * [7] https://drive.google.com/drive/folders/19ecI2YKMGeaCGc4s_e1WOkTFfQ_AZ1x8
 * [8] https://github.com/iurisegtovich/estimation/issues
 * [9] https://iurisegtovich.github.io/estimation/
+
+## Como citar o recurso estimation em um trabalho científico:
+
+* [1] Este repositório de código
+Segtovich I. S. V. et al., parameter Estimation for non linear models, código computacional hospedado no github, DOI: 10.5281/zenodo.2653205 
+
+> * trabalhos academicos e fontes utilizadas diretamente
+> * [1] Livro de fundamentos da metodologia: Schwaab & Pinto, 2007, Análise de Dados Experimentais I - Fundamentos de Estatística e Estimação de Parâmetros.
+> [http://www.e-papers.com.br/produtos.asp?codigo_produto=2792]
+> * [1] Artigos originais anteriores ao livro:
+> * [1] PSO - KENNEDY & EBERHART, PROC IEEE INTERNATIONAL CONFERENCE ON NEURAL NETWORKS, PERTH, AUSTRALIA, PP. 1942-1948
+> * [1] Gauss Newton - ANDERSON ET AL.,AICHE J.,1978,24(1),20-29
+> * [1] L&B - LAW & BAILEY,CHEM.ENG.SCI.,1963,18,189-202
+> * [1] zigurat - Marsaglia, G. & Tsang, W.W. (2000) `The ziggurat method for generating
+> ! random variables', J. Statist. Software, v5(8)
+> * [1] zigurat src https://people.sc.fsu.edu/~jburkardt/f_src/ziggurat/ziggurat.html
+> * [1] gsl - https://www.gnu.org/software/gsl/
+> * [1] dassl/linpack src- http://www.netlib.org/ode/
+> * [1] dassl A DESCRIPTION OF DASSL: A DIFFERENTIAL/ALGEBRAIC SYSTEM SOLVER, L. R. PETZOLD, SAND82-8637, SANDIA NATIONAL LABORATORIES, SEPTEMBER 1982
+> * [1] msys2/mingw64 - https://www.msys2.org/ & https://github.com/mirror/mingw-w64
+> * [1] manual estima93 (ESTIMA:“Um Pacote Computacional para Estimação de Parâmetros e Projeto de Experimentos”) -
+> REFERENCIA E BUSCA BIBLIOGRAFICA DE LITERATURA CITANDO:
+> https://scholar.google.com.br/scholar?q=author%3Anoronha+author%3Apinto+author%3Amonteiro+author%3Alob%C3%A3o+author%3Asantos
+
+
+
