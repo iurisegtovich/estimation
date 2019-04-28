@@ -1,7 +1,7 @@
 parameter ESTIMATION for non linear models
 
-Codebase (github): https://github.com/iurisegtovich/estimation/tree/master
-
 Resumo (github-pages): https://iurisegtovich.github.io/estimation/
+
+Repositório de código (github): https://github.com/iurisegtovich/estimation/tree/master
 
 Mais informações (wiki): https://github.com/iurisegtovich/estimation/wiki

@@ -29,7 +29,7 @@ clean: .FORCE
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Arquivos e receitas do projeto:
 ## Receita para o programa final:
-BUILDS/$(mode)/bin/main.elf: dassl_src/* ziggurat_src/* estimation_src/* MODEL_src/*
+BUILDS/$(mode)/bin/main.elf: dassl_src/* ziggurat_src/* estimation_src/* MODEL_src/* Makefile
 	#clean
 	make clean mode=$(mode)
 	#dassl
@@ -82,5 +82,4 @@ DASSL_BASIC_OPTIONS = -O0 -std=legacy
 #-fcheck-all SHOWS MEMORY ADRESSING ERRORS INTRINSIC TO THE CODE
 #USING -O0 IS THE SAFEST OPTION.
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
 
