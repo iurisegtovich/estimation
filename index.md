@@ -38,13 +38,6 @@ Mais informações serão disponibilizadas em formato wiki vinculado ao reposit�
 
 Para relatar problemas ou acompanhar a discussão de problemas, visite a seção "issues" do projeto [8]
 
-## Agradecimentos
-
-Agradeço ao prof. José Carlos Pinto
-com quem aprendi sobre estimação de parâmetros no ano de 2013,
-e ao prof. Amaro G. Barreto Jr.
-com quem continuei meus estudos nesta área durante meu período de pós graduação.
-
 ## Referências
 
 * [1] Schwaab & Pinto, 2007, Análise de Dados Experimentais I - Fundamentos de Estatística e Estimação de Parâmetros.
@@ -81,5 +74,9 @@ Segtovich I. S. V. et al., parameter Estimation for non linear models, código c
 > REFERENCIA E BUSCA BIBLIOGRAFICA DE LITERATURA CITANDO:
 > https://scholar.google.com.br/scholar?q=author%3Anoronha+author%3Apinto+author%3Amonteiro+author%3Alob%C3%A3o+author%3Asantos
 
+## Agradecimentos
 
-
+Agradeço ao prof. José Carlos Pinto
+com quem aprendi sobre estimação de parâmetros no ano de 2013,
+e ao prof. Amaro G. Barreto Jr.
+com quem continuei meus estudos nesta área durante meu período de pós graduação no grupo ATOMS.
