@@ -33,9 +33,17 @@ Instruções para carregar o código ESTIMATION a partir do repositório git, us
 
 Mais informações serão disponibilizadas em formato wiki vinculado ao repositório do projeto [2].
 
+
 ## Problemas ?
 
 Para relatar problemas ou acompanhar a discussão de problemas, visite a seção "issues" do projeto [8]
+
+## Agradecimentos
+
+Agradeço ao prof. José Carlos Pinto
+com quem aprendi sobre estimação de parâmetros no ano de 2013,
+e ao prof. Amaro G. Barreto Jr.
+com quem continuei meus estudos nesta área durante meu período de pós graduação.
 
 ## Referências
 
