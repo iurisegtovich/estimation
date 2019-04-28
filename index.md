@@ -1,4 +1,4 @@
-![splash.png](splash.png)
+![splash](images/splash.png)
 
 # Resumo
 
