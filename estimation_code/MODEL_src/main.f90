@@ -42,6 +42,6 @@ program main
   INTEGER IPAR(*)
 !NO CASO DE USAR INFO INDICANDO QUE ELA NÃO VAI SER CHAMADA
 !ELA DEVE SER DECLARADA AQUI MAS PODE FICAR SEM IMPLEMENTAÇÃO
-  END SUBROUTINE
+  ENDSUBROUTINE
 !===============================================================================
-end program
+ENDPROGRAM

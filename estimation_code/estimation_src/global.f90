@@ -131,6 +131,13 @@ CONTAINS
     WRITE(C,'(E25.17E3)') R
   ENDFUNCTION
 !===============================================================================
+  FUNCTION PERCENT_TO_CHAR(R) RESULT(C)
+    REAL(8), INTENT(IN) :: R
+    CHARACTER(LEN=25) :: C1, C
+    WRITE(C1,'(F4.1)') R*100.D0
+    WRITE(C,'(A)') TRIM(C1)//" %"
+  ENDFUNCTION
+!===============================================================================
   SUBROUTINE CCWRITE(NUM,MESSAGESTR)
     INTEGER, INTENT(IN) :: NUM(:)
     INTEGER :: I

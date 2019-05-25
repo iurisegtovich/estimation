@@ -76,28 +76,21 @@ CONTAINS
     PMODELS=>MODELS
 !-------------------------------------------------------------------------------
     CALL SPLASH()
-!-------------------------------------------------------------------------------
     CALL LEITURA_EXP()
-!-------------------------------------------------------------------------------
     CALL LEITURA_OPT()
-!-------------------------------------------------------------------------------
     CALL ALLOCATION()
-!-------------------------------------------------------------------------------
     CALL PRESTATISTICS()
 !-------------------------------------------------------------------------------
     CALL SWARM(FLAG_REGCONF,NIT_SWARM,NPS,PLMIN,PLMAX,FOBJ,GL)
     CALL GRAFICO_SWARM()
-!-------------------------------------------------------------------------------
     CALL POSTSTATISTICS()
     CALL FILTRO_REGCONF()
 !-------------------------------------------------------------------------------
     CALL GAUSSNEWTON(NIT_GAUSSNEWTON,FTOL,ALPHA_LB_TOL,PLMIN,PLMAX,DP,IT,FOBJ,COV,PRED)
-!-------------------------------------------------------------------------------
     CALL POSTSTATISTICS()
     CALL FILTRO_REGCONF()
 !-------------------------------------------------------------------------------
     CALL REPORT()
-!-------------------------------------------------------------------------------
     CALL MEMFREE()
 !===============================================================================
   CONTAINS
@@ -430,17 +423,13 @@ CONTAINS
         CLOSE(REGCONF_FNUM)
       ENDIF
       WRITE(REPORT_FNUM, '(A)') 
-      WRITE(REPORT_FNUM,*) 'XIMIN   FOBJ       CHI2MAX'
-      WRITE(REPORT_FNUM,'(3(A))') DSCI_TO_CHAR(CHI2MIN), DSCI_TO_CHAR(FOBJ), DSCI_TO_CHAR(CHI2MAX)
-      WRITE(REPORT_FNUM,*) 'PABSMIN   PABS       PABSMAX'
-      WRITE(REPORT_FNUM,'(3(A))') DSCI_TO_CHAR(ALPHA/2.D0), DSCI_TO_CHAR(PABS), DSCI_TO_CHAR(1.D0-ALPHA/2.D0)
+      WRITE(REPORT_FNUM,*) 'CHI2MIN     FOBJ        ( PABS ) CHI2MAX'
+      WRITE(REPORT_FNUM,'(4(A))') DSCI_TO_CHAR(CHI2MIN), DSCI_TO_CHAR(FOBJ), ' ('//DSCI_TO_CHAR(PABS)//')', DSCI_TO_CHAR(CHI2MAX)
       WRITE(REPORT_FNUM, *)
 
       WRITE(*, '(A)') 
-      WRITE(*,*) 'XIMIN   FOBJ       CHI2MAX'
-      WRITE(*,'(3(A))') SCI_TO_CHAR(CHI2MIN), SCI_TO_CHAR(FOBJ), SCI_TO_CHAR(CHI2MAX)
-      WRITE(*,*) 'PABSMIN   PABS       PABSMAX'
-      WRITE(*,'(3(A))') SCI_TO_CHAR(ALPHA/2.D0), SCI_TO_CHAR(PABS), SCI_TO_CHAR(1.D0-ALPHA/2.D0)
+      WRITE(*,*) 'CHI2MIN     FOBJ        ( PABS ) CHI2MAX'
+      WRITE(*,'(4(A))') SCI_TO_CHAR(CHI2MIN), SCI_TO_CHAR(FOBJ), ' ('//TRIM(PERCENT_TO_CHAR(PABS))//')', SCI_TO_CHAR(CHI2MAX)
       WRITE(*,*)
 
     ENDSUBROUTINE
@@ -451,7 +440,7 @@ CONTAINS
       ALLOCATE(EY(NMOD))
       DO M = 1, NMOD
         ALLOCATE(EY(M)%M(NEXP(M),NSAI(M)))
-      END DO
+      ENDDO
       ALLOCATE(PP(NPAR))
       ALLOCATE(PMIN(NPAR))
       ALLOCATE(PMAX(NPAR))

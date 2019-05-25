@@ -24,7 +24,7 @@ program main
     REAL(8), INTENT(IN) :: GUESS(:)
     REAL(8) :: PARAM(:)
     !MODELO
-    VARSAI(1)=PARAM(1)*VARENT(1) + PARAM(2)
+    VARSAI(1)=PARAM(1)* PARAM(2)* VARENT(1) /(1+ PARAM(2)*VARENT(1))
   ENDSUBROUTINE
 !===============================================================================
   SUBROUTINE RES(T,Y,YPRIME,DELTA,IRES,RPAR,IPAR)
