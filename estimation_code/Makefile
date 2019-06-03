@@ -35,6 +35,15 @@ BUILDS/$(mode)/bin/main.elf: dassl_src/* ziggurat_src/* estimation_src/* MODEL_s
 	#dassl
 	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl_src/dlinpk.f -o BUILDS/$(mode)/obj/dlinpk.o
 	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c dassl_src/ddassl.f -o BUILDS/$(mode)/obj/ddassl.o
+	#daspk
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/solver/daux.f -o BUILDS/$(mode)/obj/daux.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/solver/ddaspk.f -o BUILDS/$(mode)/obj/ddaspk.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/solver/dlinpk.f -o BUILDS/$(mode)/obj/dlinpk.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/preconds/dbanpre.f -o BUILDS/$(mode)/obj/dbanpre.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/preconds/drbdpre.f -o BUILDS/$(mode)/obj/drbdpre.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/preconds/dsparsk.f -o BUILDS/$(mode)/obj/dsparsk.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/preconds/dilupre.f -o BUILDS/$(mode)/obj/dilupre.o
+#	$(COMPILER) $(DASSL_BASIC_OPTIONS) -JBUILDS/$(mode)/obj -c daspk_src/preconds/drbgpre.f -o BUILDS/$(mode)/obj/drbgpre.o
 	#ziggurat
 	$(COMPILER) $(FCOPTS) -Wno-conversion -JBUILDS/$(mode)/obj -c ziggurat_src/ziggurat.f90 -o BUILDS/$(mode)/obj/ziggurat.o
 	#estimation
