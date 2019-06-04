@@ -1,0 +1,17 @@
+estimation_code/BUILDS/*/bin/**
+!estimation_code/BUILDS/*/bin/README.md
+
+estimation_code/BUILDS/*/obj/**
+!estimation_code/BUILDS/*/obj/README.md
+
+estimation_code/OUTPUT/**
+!estimation_code/OUTPUT/README.md
+!estimation_code/OUTPUT/*.ods
+
+
+**/.ipynb_checkpoints
+**/*.pyc
+
+**/__refs/**
+__changelog.md
+__changelog.md.html
