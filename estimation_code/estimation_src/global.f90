@@ -74,6 +74,8 @@ MODULE GLOBAL_MOD
   TYPE(M3_LIST), ALLOCATABLE :: VARYEINV(:) !LISTA DE NMOD ARRAYS DE NEXP X NSAI X NSAI: NEXP INVERSAS DAS COVARIANCIAS DE VARIAVEIS DE SAIDA (NSAI X NSAI)
   REAL(8), ALLOCATABLE :: PARAM(:) !LISTA DE NPAR PARÂMETROS
   TYPE(M2_LIST), ALLOCATABLE :: EY(:) !ERRO DAS VARIÁVEIS DE SAÍDA (CALCULADO - EXPERIMENTAL)
+
+  logical :: useLB = .TRUE.
 !===============================================================================
 CONTAINS
 !===============================================================================

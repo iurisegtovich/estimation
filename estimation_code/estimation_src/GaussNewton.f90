@@ -110,6 +110,9 @@ MODULE GAUSSNEWTON_MOD
       ! CÁLCULO DO INCREMENTO NOS PARÂMETROS STEPP[NPAR]
       !PASSO, EXEMPLO 5.1, EQ 5.12 DO METODO DE NEWTON
       STEPP = -MATMUL(TINV,U)
+
+
+      if (useLB) then
       !-------------------------------------------------------------------------
       ! MÉTODO LAW & BAILEY PARA VERIFICAR CONVERGENCIA E ACELARAÇÃO
       !-------------------------------------------------------------------------
@@ -215,7 +218,22 @@ MODULE GAUSSNEWTON_MOD
         ! RECALCULAR FUNÇÃO OBJETIVO
         CALL OBJF(FOBJN)
       ENDDO !LAW&BAILEY
-      
+
+      else !not useLB
+        PARAM = PARAM + STEPP
+	
+        CALL OBJF(FOBJN)
+
+	print*, PARAM, '-->', FOBJN
+
+        IF ( (DABS(FOBJN-FOBJ)/FOBJN < FTOL)) THEN
+          !OBTIDA CONVERGENCIA (CRITERIO RELATIVO) NA FOBJ
+          FOBJ=FOBJN
+          EXIT
+        ENDIF
+	FOBJ=FOBJN
+      endif !useLB
+
       IF (IT .GE. NIT) THEN
         WRITE(*,*) '(IT .GE. NIT)'
         WRITE(*,*) 'O NUMERO MAXIMO DE ITERACOES NA GAUSSNEWTON/LAWBAILEY FOI EXCEDIDO'
