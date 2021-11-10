@@ -56,8 +56,11 @@ MODULE GAUSSNEWTON_MOD
     ALLOCATE(DYCDP(NMOD))
     DO M = 1, NMOD
       ALLOCATE(COVPRED(M)%M(NEXP(M),NSAI(M),NSAI(M)))
+      COVPRED(M)%M=0.d0
       ALLOCATE(EY(M)%M(NEXP(M),NSAI(M)))
+      EY(M)%M=0.d0
       ALLOCATE(DYCDP(M)%M(NEXP(M),NSAI(M),NPAR))
+      DYCDP(M)%M=0.d0
     ENDDO
     !INICIALIZAÇÃO ARQUIVO
     ! ARQUIO DE SAIDA DOS DADOS OBTIDOS AO LONGO DAS ITERAÇÕES
@@ -65,6 +68,12 @@ MODULE GAUSSNEWTON_MOD
     !---------------------------------------------------------------------------
     ! INICIO DAS ITERAÇÕES
     !---------------------------------------------------------------------------
+    if (NIT==0) then
+    print*, 'pulando gn'
+    return
+    endif
+    print*, 'iniciando gn'
+
     IT=0
     ! CÁLCULO DA FUNÇÃO OBJETIVO
     CALL OBJF(FOBJ)
@@ -237,7 +246,8 @@ MODULE GAUSSNEWTON_MOD
       IF (IT .GE. NIT) THEN
         WRITE(*,*) '(IT .GE. NIT)'
         WRITE(*,*) 'O NUMERO MAXIMO DE ITERACOES NA GAUSSNEWTON/LAWBAILEY FOI EXCEDIDO'
-        STOP
+        !STOP
+        EXIT !DO GAUSSNEWTON
       ENDIF
     ENDDO !GAUSSNEWTON
       !-------------------------------------------------------------------------

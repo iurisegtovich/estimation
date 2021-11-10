@@ -87,11 +87,13 @@ CONTAINS
     CALL FILTRO_REGCONF()
 !-------------------------------------------------------------------------------
     CALL GAUSSNEWTON(NIT_GAUSSNEWTON,FTOL,ALPHA_LB_TOL,PLMIN,PLMAX,DP,IT,FOBJ,COV,PRED)
+    !print*, pred(1)%M !vem zerada se NIT==0
     CALL POSTSTATISTICS()
     CALL FILTRO_REGCONF()
 !-------------------------------------------------------------------------------
     CALL REPORT()
     CALL MEMFREE()
+    print*, 'concluihdo'
 !===============================================================================
   CONTAINS
 !===============================================================================
