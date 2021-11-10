@@ -69,6 +69,7 @@ MODULE SWARM_MOD
       IF(FLAG_REGCONF .EQ. 1) THEN
         OPEN (NEWUNIT=SAIDA_SWARM_POPULACAO_FNUM,FILE='OUTPUT/SAIDA_SWARM_POPULACAO.DAT',STATUS='REPLACE',ACTION='WRITE')
         write(SAIDA_SWARM_POPULACAO_FNUM,*) '(IT),(I),F(I),P(I,:)'
+        !TODO: writear os YCs aqui, para poder ter eles no filtrado, para poder fazer nuvems de Y
       ENDIF
       !INICIO DAS ITERAÇÕS
       DO IT = 1,NIT
@@ -140,6 +141,9 @@ MODULE SWARM_MOD
       !ENCERRAMENTO
       FOBJ = FOTM
       PARAM = POTM
+
+      CALL OBJF(F(1)) ! chama a fobj última vez p garantir que o último YC seja do ótimo e o grafico_swarm sair legal
+
       IF(FLAG_REGCONF .EQ. 1) THEN
         CLOSE(SAIDA_SWARM_POPULACAO_FNUM)
       ENDIF

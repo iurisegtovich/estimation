@@ -478,7 +478,7 @@ CONTAINS
       DEALLOCATE(PMAX)
     ENDSUBROUTINE
 !===============================================================================
-    SUBROUTINE GRAFICO_SWARM()
+    SUBROUTINE GRAFICO_SWARM() !usa os valores "atuais" de YC
       INTEGER :: GRAFICO_SWARM_FNUM
       !CHAMA FUNÇÃO OBJETIVO PARA OBTER OS VALORES DE VARIAVEL DE SAIDA OTIMOS PARA GRAFICO
       CALL OBJF(FOBJ)
