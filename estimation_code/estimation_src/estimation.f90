@@ -326,9 +326,9 @@ CONTAINS
         PRINT*, '(',FOBJ, '< F <', OBJF_FISHER,')'
         PRINT*, ' '
         DO M = 1, NMOD
-          FORMAT_STR = '('//TRIM(INT_TO_CHAR(NPAR))//'('//'"PP("'//',I4.1,'//'")"'//',A),2(A),'
-          FORMAT_STR = TRIM(FORMAT_STR)//TRIM(INT_TO_CHAR(NEXP(M)*NSAI(M)))//'('//'"YC("'//',I4.1,'//'","'//',I4.1,'//'")"'//',A)'//')'
-          WRITE (REGCONF_FNUM,FORMAT_STR) (II, CHAR(9),II=1,NPAR), 'FOBJ', CHAR(9), ((II,JJ,CHAR(9),II=1,NEXP(M)),JJ=1,NSAI(M))
+          FORMAT_STR = '('//TRIM(INT_TO_CHAR(NPAR))//'('//'"PP("'//',I4.1,'//'")"'//',A),(A) )'
+          FORMAT_STR = TRIM(FORMAT_STR) 
+          WRITE (REGCONF_FNUM,FORMAT_STR) (II, CHAR(9),II=1,NPAR), 'FOBJ'
         ENDDO
         ! ABRE ARQUIVO COM OS DADOS DO SWARM DE PARTÍCULAS
         OPEN (NEWUNIT=SAIDA_SWARM_POPULACAO_FNUM,FILE='OUTPUT/SAIDA_SWARM_POPULACAO.DAT',STATUS='OLD',ACTION='READ')
